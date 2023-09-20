@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Perhitungan Volume Bangun Ruang</title>
+    <script src="proses/volume.js"></script>
+</head>
+<body onload="tampilanAwal()">
+    <b>Menu</b><br>
+    <hr>
+    <a href="tampilanawal.html">Home</a><br />
+    <a href="biodata.html">Biodata</a><br />
+    <a href="fibonnachi.html">Perhitungan Fibonanci</a><br />
+    <a href="volume.html">Perhitungan Volume Bangun Ruang</a><br />
+    <h1>Kalkulator Volume Bangun Ruang</h1>
+    <label for="jbr">Pilih Jenis Bangun Ruang yang ingin dihitung volumenya: </label>
+    <!--memilih jenis bangun ruang yang akan dihitung volumenya-->
+    <select id="jbr" onchange="tampilkanInput(this.value)">
+        <option value="balok">Balok</option>
+        <option value="bola">Bola</option>
+        <option value="kerucut">Kerucut</option>
+    </select>
+    <!--inputan balok-->
+    <div id="hitungbalok">
+        <label for="panjang">Masukkan Panjangnya:</label>
+        <input type="number" id="panjang"><br>
+
+        <label for="lebar">Masukkan Lebarnya: </label>
+        <input type="number" id="lebar"><br>
+
+        <label for="tinggi">Masukkan Tingginya: </label>
+        <input type="number" id="tinggi"><br>
+    </div>
+    <!--inputan bola-->
+    <div id="hitungbola">
+        <label for="jarijaribola">Masukkan Jari-Jarinya: </label>
+        <input type="number" id="jarijaribola"><br>
+    </div>
+    <!--inputan kerucut-->
+    <div id="hitungkerucut">
+        <label for="jarikerucut">Masukkan Jari-Jarinya: </label>
+        <input type="number" id="jarikerucut"><br>
+
+        <label for="tinker">Masukkan Tingginya: </label>
+        <input type="number" id="tinker"><br>
+    </div>
+
+    <button onclick="hitungvolume()">Hitung</button>
+
+    <p id="hasil"></p>
+</body>
+</html>
